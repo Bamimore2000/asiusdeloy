@@ -17,7 +17,7 @@ const StayUpdated = () => {
               services, <br /> and industry insights straight to your inbox
             </p>
 
-            <div className="input flex z-[100] justify-between bg-white mx-auto p-1 max-w-[400px] pl-8 rounded-full ">
+            <div className="input flex relative z-[10] justify-between bg-white mx-auto p-1 max-w-[400px] pl-8 rounded-full ">
               <input
                 placeholder="Input E-Mail address"
                 className="outline-none flex-1 border-none text-gray-700 focus:outline-none"

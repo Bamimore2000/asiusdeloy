@@ -107,7 +107,7 @@ interface PaginationProps {
   onDotButtonClick?: (index: number) => void; // Making this optional
 }
 
-const PaginationVariant: React.FC<PaginationProps> = ({
+export const PaginationVariant: React.FC<PaginationProps> = ({
   scrollSnaps,
   selectedIndex,
   onDotButtonClick,

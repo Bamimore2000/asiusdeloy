@@ -53,7 +53,7 @@ const Button: React.FC<ButtonProps> = ({
         onClick={onClick}
         className={`btn ${
           primary &&
-          "bg-gray-950 sm:text-base sm:px-4 sm:py-2 text-gray-100 rounded-lg px-8 py-3 font-semibold"
+          "bg-gray-950 sm:text-base sm:px-4 sm:py-3 text-gray-100 rounded-lg px-8 py-3 font-semibold"
         } ${disabled ? "opacity-50 cursor-not-allowed" : ""} ${className}`}
         aria-label={ariaLabel}
         target={target}
@@ -73,7 +73,7 @@ const Button: React.FC<ButtonProps> = ({
       disabled={disabled || isLoading}
       className={`btn ${
         primary &&
-        "bg-gray-950 sm:text-base sm:px-4 sm:py-2 text-gray-100 rounded-lg px-8 py-3 font-semibold"
+        "bg-gray-950 sm:text-base sm:px-4 sm:py-3 text-gray-100 rounded-lg px-8 py-3 font-semibold"
       } ${disabled ? "opacity-50 cursor-not-allowed" : ""} ${className} `}
       aria-label={ariaLabel}
       aria-disabled={disabled || isLoading}

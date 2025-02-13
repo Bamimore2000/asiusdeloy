@@ -22,10 +22,12 @@
   --secondary-100: #f8dec8;
   --secondary-200: #f4bb99;
   --secondary-300: #ef9b66;
+
   --secondary-400: #ea7b33;
   --secondary-500: #9b5013;
   --secondary-600: #7d4010;
   --secondary-700: #723b0e;
+  --secondary-750: #48371b;
   --secondary-800: #3f2008;
   --secondary-900: #201004;
 
@@ -39,7 +41,7 @@
   --gray-200: #f5f5f5;
   --gray-300: #9c9c9c;
   --gray-350: #d9d9d9;
-  --gray-400: #a3a3a3;
+  --gray-400: #ebebeb;
   --gray-500: #e7e7e7;
   --gray-600: #b8b8b8;
   --gray-700: #8a8a8a;
@@ -98,6 +100,10 @@
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.max-w {
+  max-width: 100%;
 }
 
 .header {

@@ -6,6 +6,7 @@ import WhyChoose from "./sections/WhyChoose";
 import Works from "./sections/Works";
 import Faq from "./sections/Faq";
 import StayUpdated from "./sections/StayUpdated";
+import Testimonials from "./sections/Testimonials";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Services />
       <Inverted />
       <WhyChoose />
+      <Testimonials />
       <Faq />
       <StayUpdated />
     </main>

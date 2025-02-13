@@ -129,7 +129,7 @@ const SecondSection = () => {
   );
 };
 
-const TabsHeader: React.FC<{
+export const TabsHeader: React.FC<{
   index: number;
   currentIndex: number;
   setCurrentIndex: Dispatch<SetStateAction<number>>;
@@ -140,7 +140,7 @@ const TabsHeader: React.FC<{
     <div
       ref={tabRef}
       onClick={() => setCurrentIndex(index)}
-      className={`cursor-pointer shrink-0 font-semibold text-xl sm:pb-2 pb-4 ${
+      className={`cursor-pointer shrink-0 font-semibold sm:text-base text-lg sm:pb-2 pb-4 ${
         index === currentIndex ? "text-gray-950" : "text-gray-700"
       }`}
     >
@@ -150,7 +150,7 @@ const TabsHeader: React.FC<{
 };
 
 // ✅ TabsContainer Fix
-const TabsContainer: React.FC<{
+export const TabsContainer: React.FC<{
   data: string[];
   currentIndex: number;
   setCurrentIndex: Dispatch<SetStateAction<number>>;
@@ -184,10 +184,12 @@ const TabsContainer: React.FC<{
         ))}
 
         {/* Slider */}
-        <div
-          ref={sliderRef}
-          className="absolute bottom-0 h-[2px] bg-gray-950 transition-all duration-300"
-        ></div>
+        <div className="slider-parent absolute bottom-0 h-[2px] w-full bg-gray-350">
+          <div
+            ref={sliderRef}
+            className=" bg-gray-950 absolute h-full transition-all duration-300"
+          ></div>
+        </div>
       </div>
     </div>
   );
