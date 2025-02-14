@@ -18,30 +18,26 @@ export const constructionData: ConstructionDataType[] = [
     header: "Construction and Civil",
     data: [
       {
-        title: "Structural Design & Analysis",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
+        title: "Design & prototyping of mechanical system",
+        text: "The design and prototyping of mechanical systems involve creating innovative solutions.",
+        image: "/images/construction-1.webp",
       },
       {
-        title: "Project management for construction projects.",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
+        title: "Maintenance & repair of   machinery",
+        text: "Maintenance and repair of machinery are essential practices to ensure the longevity, efficiency, .",
+        image: "/images/construction-2.webp",
       },
+
       {
-        title: "Surveying & land development consulting.",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
+        title: "Manufacturing process optimization",
+        text: "This focuses on improving waste, & enhancing product quality in production systems.",
+        image: "/images/construction-3.webp",
       },
       {
         title:
-          "Installation &maintenance of infrastructure (bridges, roads, tunnels).",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
-      },
-      {
-        title: "Site inspections and compliance with building regulations.",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
+          "HVAC(Heating, Ventilation, and Air Conditioning) design and installation",
+        text: "Critical for creating comfortable, energy-efficient, and healthy indoor environments",
+        image: "/images/construction-4.webp",
       },
     ],
   },

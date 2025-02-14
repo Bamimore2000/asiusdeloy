@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { IoIosArrowDown } from "react-icons/io";
-
 import { EmblaOptionsType } from "embla-carousel";
 import React, { ComponentPropsWithRef, useCallback } from "react";
 import { EmblaCarouselType } from "embla-carousel";
@@ -70,6 +70,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const [openSub, setOpenSub] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -86,7 +87,10 @@ const Header = () => {
         scrolled
           ? "bg-white shadow-md"
           : activePaths.includes(pathname)
-          ? "bg-transparent"
+          ? `  ${
+              !menuOpen &&
+              "lg:mt-4 lg:bg-white lg:rounded-full lg:scale-[0.94] lg:px-2 lg:transform lg:origin-center "
+            } mx-auto`
           : "bg-white"
       }`}
     >
@@ -127,31 +131,63 @@ const Header = () => {
 
       {/* Mobile Sidebar Navigation */}
       <div
-        className={`fixed top-0 left-0 h-screen w-64 bg-white z-[100] shadow-md transform ${
-          menuOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 left-0 p-4 h-screen w-64 bg-white z-[100] shadow-md transform ${
+          menuOpen ? "translate-x-0" : "-translate-x-[150%]"
         } transition-transform duration-300`}
       >
-        <div className="flex justify-between items-center p-4 border-b">
-          <button className="pl-2" onClick={() => setMenuOpen(false)}>
+        <div className="flex justify-between items-center  border-b">
+          <button className="" onClick={() => setMenuOpen(false)}>
             <X size={24} />
           </button>
         </div>
-        <ul className="p-4 space-y-4">
-          {navLinks.map((item, index) => (
-            <li key={index}>
-              <Link
-                href={item.url}
-                className={` px-4 flex gap-2 items-center py-2 text-lg rounded transition ${
-                  pathname === item.url ? "text-gray-700" : "text-inherit"
-                }`}
-                onClick={() => setMenuOpen(false)}
-              >
-                {item.name}
-                {item.url === "/services" && <IoIosArrowDown size={20} />}
-              </Link>
-            </li>
-          ))}
+        <ul className=" space-y-4">
+          {navLinks.map((item, index) => {
+            const isService = item.url === "/services";
+            return (
+              <li key={index}>
+                <div
+                  className={` block h-max  py-2 text-xl text-gray-900 font-semibold rounded transition ${
+                    pathname === item.url ? "text-gray-700" : "text-inherit"
+                  }`}
+                >
+                  <Link
+                    onClick={(e) => {
+                      if (isService) {
+                        e.preventDefault();
+                        setOpenSub(!openSub);
+                        return;
+                      }
+                      setMenuOpen(false);
+                    }}
+                    href={item.url}
+                    className="first flex gap-2 items-center"
+                  >
+                    {item.name}
+                    {item.url === "/services" && <IoIosArrowDown size={20} />}
+                  </Link>
+
+                  {isService && (
+                    <SubMenu
+                      setMenuOpen={setMenuOpen}
+                      setOpenSub={setOpenSub}
+                      openSub={openSub}
+                    />
+                  )}
+                </div>
+              </li>
+            );
+          })}
         </ul>
+
+        <Link
+          onClick={() => {
+            setMenuOpen(false);
+          }}
+          href="/contact"
+          className="absolute text-gray-950 transform right-1/2 translate-x-1/2 text-center w-[90%] rounded-xl py-3 border border-gray-700 bg-gray-50 bottom-[18vh]"
+        >
+          Book a service
+        </Link>
       </div>
 
       {/* Overlay (click to close) */}
@@ -162,6 +198,40 @@ const Header = () => {
         />
       )}
     </nav>
+  );
+};
+const SubMenu: React.FC<{
+  openSub: boolean;
+  setOpenSub: React.Dispatch<React.SetStateAction<boolean>>;
+  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}> = ({ openSub, setOpenSub, setMenuOpen }) => {
+  return (
+    <AnimatePresence>
+      {openSub && (
+        <motion.div
+          key="submenu"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="flex mt-3 text-lg font-normal flex-col gap-2 overflow-hidden"
+        >
+          {Drop.map((item, index) => (
+            <Link
+              onClick={() => {
+                setOpenSub(false);
+                setMenuOpen(false);
+              }}
+              key={index}
+              href={item.link}
+              className="block"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 export default Header;
@@ -188,6 +258,11 @@ const NavLinks: React.FC<{ data: { url: string; name: string }[] }> = ({
           key={index}
         >
           <Link
+            onClick={(e) => {
+              if (item.url === "/services") {
+                e.preventDefault();
+              }
+            }}
             href={item.url}
             className="hover:underline  flex items-center gap-2 relative whitespace-nowrap px-3 py-2 rounded-md"
           >

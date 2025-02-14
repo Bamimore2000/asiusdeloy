@@ -37,7 +37,7 @@ const Hero = () => {
           </p>
           <Button
             primary
-            className="bg-secondary-700 lg:!bg-[#F8F8F8] lg:text-[#2E2E2E] w-max  text-white"
+            className="bg-secondary-700 lg:rounded-full lg:!bg-[#F8F8F8] lg:text-[#2E2E2E] w-max  text-white"
             text="Book a service"
           />
         </div>

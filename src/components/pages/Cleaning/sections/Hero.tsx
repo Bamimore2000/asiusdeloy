@@ -29,11 +29,11 @@ const Hero = () => {
             the specific needs of your property, business, or construction site.
           </h2>
           <Button
-            className="mb-8 sm:mb-4 bg-secondary-700"
+            className="mb-8 sm:mb-4 lg:w-full lg:rounded-full bg-secondary-700"
             primary
             text="Book a service"
           />
-          <div className="just flex gap-2 text-xl text-gray-800 items-center">
+          <div className="just flex gap-2 text-xl  text-gray-800 items-center">
             {" "}
             <RiPhoneFill size={30} />
             Just one call away

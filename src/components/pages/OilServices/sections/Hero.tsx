@@ -34,7 +34,7 @@ const Hero = () => {
             </p>
             <Button
               primary
-              className="bg-secondary-700 text-white  w-max"
+              className="bg-secondary-700 lg:w-full lg:rounded-full text-white  w-max"
               text="Reach out"
             />
           </div>
