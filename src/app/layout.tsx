@@ -15,8 +15,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ASUISDELOY",
-  description: "Made for you",
+  title: "Asiusdeloy Ltd - Reliable Cleaning, Engineering & IT Services",
+  description:
+    "Asiusdeloy Ltd offers expert cleaning, engineering consultancy, IT support, and construction services. We provide reliable, sustainable, and customer-focused solutions for businesses and individuals.",
+  keywords: [
+    "Asiusdeloy Ltd",
+    "cleaning services",
+    "construction cleaning",
+    "office cleaning",
+    "residential cleaning",
+    "engineering consultancy",
+    "IT support",
+    "construction services",
+    "sustainable solutions",
+    "professional services",
+  ],
+  openGraph: {
+    title: "Asiusdeloy Ltd - Reliable Cleaning, Engineering & IT Services",
+    description:
+      "Providing top-tier cleaning, engineering consultancy, IT support, and construction services tailored to your needs.",
+    url: "https://www.asiusdeloyltd.co.uk",
+    type: "website",
+    images: [
+      {
+        url: "https://www.asiusdeloyltd.co.uk/assets/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Asiusdeloy Ltd Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Asiusdeloy Ltd - Reliable Cleaning, Engineering & IT Services",
+    description:
+      "Providing top-tier cleaning, engineering consultancy, IT support, and construction services tailored to your needs.",
+    images: ["https://www.asiusdeloyltd.co.uk/assets/logo.png"],
+  },
 };
 
 export default function RootLayout({
