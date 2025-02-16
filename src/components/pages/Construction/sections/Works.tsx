@@ -25,9 +25,9 @@ const FirstSection = () => {
 
         <div className="justify-between lg:flex-col lg:items-start items-end lg:gap-4 flex">
           <h5 className="text-gray-800 max-w-[420px]">
-            Welcome to Deloy, your trusted partner in commercial construction.
-            We specialize in delivering innovative, cost-effective, and
-            sustainable building solutions.
+            Welcome to AsiusdeloyLTD, your trusted partner in commercial
+            construction. We specialize in delivering innovative,
+            cost-effective, and sustainable building solutions.
           </h5>
           <Button
             className="w-max h-max"

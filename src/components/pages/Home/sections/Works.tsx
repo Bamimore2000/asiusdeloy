@@ -19,6 +19,7 @@ import {
   ReactNode,
   SetStateAction,
   Dispatch,
+  useLayoutEffect,
   useRef,
   useEffect,
   useState,
@@ -150,13 +151,37 @@ export const TabsHeader: React.FC<{
 };
 
 // ✅ TabsContainer Fix
+
 export const TabsContainer: React.FC<{
   data: string[];
   currentIndex: number;
   setCurrentIndex: Dispatch<SetStateAction<number>>;
 }> = ({ data, currentIndex, setCurrentIndex }) => {
-  const tabRefs = useRef<HTMLDivElement[]>([]); // Correct ref typing
-  const sliderRef = useRef<HTMLDivElement>(null); // Ref for the slider
+  const tabRefs = useRef<HTMLDivElement[]>([]);
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const [totalWidth, setTotalWidth] = useState(10); // Default to 10
+
+  useLayoutEffect(() => {
+    if (tabRefs.current.length !== data.length || !wrapperRef.current) return; // Ensure all refs are assigned
+
+    // Get computed gap size from the wrapper
+    const computedStyle = window.getComputedStyle(wrapperRef.current);
+    const gapSize = parseFloat(computedStyle.gap) || 0; // Convert to number (default to 0 if undefined)
+
+    // Calculate total width including gaps
+    const totalTabsWidth = tabRefs.current.reduce(
+      (sum, tab) => sum + (tab?.offsetWidth || 0),
+      0
+    );
+    const totalGapWidth = (data.length - 1) * gapSize;
+
+    setTotalWidth((prev) =>
+      prev !== totalTabsWidth + totalGapWidth
+        ? totalTabsWidth + totalGapWidth
+        : prev
+    );
+  }, [data]);
 
   useEffect(() => {
     const currentTab = tabRefs.current[currentIndex];
@@ -168,7 +193,10 @@ export const TabsContainer: React.FC<{
 
   return (
     <div>
-      <div className="flex wrapper scrollbar-hide overflow-scroll gap-8 mb-20 sm:mb-6 relative">
+      <div
+        ref={wrapperRef}
+        className="flex wrapper scrollbar-hide overflow-scroll gap-8 mb-20 sm:mb-6 relative"
+      >
         {data.map((item, index) => (
           <TabsHeader
             key={index}
@@ -176,7 +204,7 @@ export const TabsContainer: React.FC<{
             setCurrentIndex={setCurrentIndex}
             index={index}
             tabRef={(el) => {
-              if (el) tabRefs.current[index] = el; // Assigning ref safely
+              if (el) tabRefs.current[index] = el;
             }}
           >
             {item}
@@ -184,10 +212,15 @@ export const TabsContainer: React.FC<{
         ))}
 
         {/* Slider */}
-        <div className="slider-parent absolute bottom-0 h-[2px] w-full bg-gray-350">
+        <div
+          style={{
+            minWidth: totalWidth,
+          }}
+          className="slider-parent absolute bottom-0 h-[2px] w-full bg-gray-350"
+        >
           <div
             ref={sliderRef}
-            className=" bg-gray-950 absolute h-full transition-all duration-300"
+            className="bg-gray-950 absolute h-full transition-all duration-300"
           ></div>
         </div>
       </div>
