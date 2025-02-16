@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -14,53 +13,39 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Asiusdeloy Ltd - Reliable Cleaning, Engineering & IT Services",
-  description:
-    "Asiusdeloy Ltd offers expert cleaning, engineering consultancy, IT support, and construction services. We provide reliable, sustainable, and customer-focused solutions for businesses and individuals.",
-  keywords: [
-    "Asiusdeloy Ltd",
-    "cleaning services",
-    "construction cleaning",
-    "office cleaning",
-    "residential cleaning",
-    "engineering consultancy",
-    "IT support",
-    "construction services",
-    "sustainable solutions",
-    "professional services",
-  ],
-  openGraph: {
-    title: "Asiusdeloy Ltd - Reliable Cleaning, Engineering & IT Services",
-    description:
-      "Providing top-tier cleaning, engineering consultancy, IT support, and construction services tailored to your needs.",
-    url: "https://www.asiusdeloyltd.co.uk",
-    type: "website",
-    images: [
-      {
-        url: "https://www.asiusdeloyltd.co.uk/assets/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Asiusdeloy Ltd Logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Asiusdeloy Ltd - Reliable Cleaning, Engineering & IT Services",
-    description:
-      "Providing top-tier cleaning, engineering consultancy, IT support, and construction services tailored to your needs.",
-    images: ["https://www.asiusdeloyltd.co.uk/assets/logo.png"],
-  },
-};
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Asiusdeloy Ltd",
+    url: "https://www.asiusdeloyltd.co.uk",
+    logo: "https://www.asiusdeloyltd.co.uk/logo.png",
+    description:
+      "Providing expert cleaning, construction, and IT solutions tailored to your needs.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+44 123 456 789",
+      contactType: "customer service",
+    },
+    sameAs: [
+      "https://www.facebook.com/Asiusdeloy",
+      "https://www.twitter.com/Asiusdeloy",
+      "https://www.linkedin.com/company/Asiusdeloy",
+    ],
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
