@@ -18,7 +18,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = {
+  const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Asiusdeloy Ltd",
@@ -38,12 +38,67 @@ export default function RootLayout({
     ],
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.asiusdeloyltd.co.uk",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About",
+        item: "https://www.asiusdeloyltd.co.uk/about",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Cleaning",
+        item: "https://www.asiusdeloyltd.co.uk/cleaning",
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Construction",
+        item: "https://www.asiusdeloyltd.co.uk/construction",
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        name: "Contact",
+        item: "https://www.asiusdeloyltd.co.uk/contact",
+      },
+      {
+        "@type": "ListItem",
+        position: 6,
+        name: "Oil Services",
+        item: "https://www.asiusdeloyltd.co.uk/oil-services",
+      },
+      {
+        "@type": "ListItem",
+        position: 7,
+        name: "Technology",
+        item: "https://www.asiusdeloyltd.co.uk/technology",
+      },
+    ],
+  };
+
   return (
     <html lang="en">
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
       </head>
       <body
