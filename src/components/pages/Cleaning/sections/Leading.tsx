@@ -20,6 +20,7 @@ const Leading = () => {
           </p>
 
           <Button
+            href="/contact"
             primary
             className="!text-[#161616] w-max bg-white"
             text="Reach out"

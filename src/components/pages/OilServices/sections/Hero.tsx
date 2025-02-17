@@ -33,6 +33,7 @@ const Hero = () => {
               business to new heights.
             </p>
             <Button
+              href="/contact"
               primary
               className="bg-secondary-700 lg:w-full lg:rounded-full text-white  w-max"
               text="Reach out"

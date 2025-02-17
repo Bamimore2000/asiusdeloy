@@ -30,6 +30,7 @@ const FirstSection = () => {
             cost-effective, and sustainable building solutions.
           </h5>
           <Button
+            href="/about"
             className="w-max h-max"
             primary={true}
             text="View all expertise"
@@ -94,7 +95,7 @@ export const CardItem: React.FC<{
       )}
       <Link
         className="text-primary-600 flex gap-2 items-center font-semibold mt-4"
-        href="/"
+        href="/contact"
       >
         Get Started <IoPlay color="#005DD6" />
       </Link>

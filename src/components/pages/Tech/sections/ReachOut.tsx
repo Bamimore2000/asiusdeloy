@@ -14,8 +14,9 @@ const ReactOut = () => {
             Over 20+ leading organizations <br /> choose Deloy IT Service
           </h5>
           <Button
+            href="/contact"
             text="Reach out"
-            className="bg-white block mx-auto relative  text-[min(2vw,2rem)] h-max md:px-6 md:py-2 md:text-base md:rounded-3xl  z-[14] text-black rounded-[3vw] px-[min(3.5vw,2rem)] py-[min(1.5vw,1rem)]"
+            className="bg-white block w-max mx-auto relative  text-[min(2vw,2rem)] h-max md:px-6 md:py-2 md:text-base md:rounded-3xl  z-[14] text-black rounded-[3vw] px-[min(3.5vw,2rem)] py-[min(1.5vw,1rem)]"
           />
           <img
             src="/images/bg-below.webp"

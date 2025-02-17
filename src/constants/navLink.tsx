@@ -22,8 +22,8 @@ export const legalLink = [
 
 export const contactLink = [
   {
-    name: "+447769579632",
-    url: "tel:+447769579632",
+    name: "+447899682616",
+    url: "tel:+447899682616",
   },
 
   {
@@ -32,8 +32,8 @@ export const contactLink = [
   },
 
   {
-    name: "someone@example.com",
-    url: "mailto:someone@example.com",
+    name: "enquiries@asiusdeloyltd.com",
+    url: "mailto:enquiries@asiusdeloyltd.com",
   },
 ];
 
@@ -126,7 +126,7 @@ export const Drop = [
     link: "/construction",
   },
   {
-    name: "Oil Services",
+    name: "Engineering Services",
     icon: (
       <svg
         width="20"
@@ -141,7 +141,7 @@ export const Drop = [
         />
       </svg>
     ),
-    link: "/oil-services",
+    link: "/engineering",
   },
   {
     name: "Technology",

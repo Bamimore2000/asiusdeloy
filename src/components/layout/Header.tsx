@@ -123,6 +123,7 @@ const Header = () => {
         </div>
 
         <Button
+          href="/contact"
           primary={true}
           className="bg-secondary-700 whitespace-nowrap sm:text-base lg:bg-gray-50 lg:border border-gray-700 lg:text-black sm:!py-2 text-white"
           text="Book a service"

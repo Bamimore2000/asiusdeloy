@@ -42,7 +42,7 @@ const CardImage: React.FC<{
   image: string;
   text: string;
   link: string;
-}> = ({ index, header, image, text }) => {
+}> = ({ header, image, text, link }) => {
   return (
     <div className="flex lg:flex-col lg:gap-8 items-center gap-10">
       <div className="image h-auto lg:max-w-[800px] w-full lg:basis-full basis-[40%] max-w-[600px]">
@@ -50,12 +50,12 @@ const CardImage: React.FC<{
       </div>
       <div className="second wrapper lg:wrapper py-8 max-w-[600px] basis-[60%]">
         {" "}
-        <span className="text-xl text-gray-800 block mb-4">[{index}]</span>
         <h3 className="font-semibold text-2xl mb-4">{header}</h3>
         <p className="text-lg w-[80%] xl:!w-[90%] sm:!w-full text-gray-800 mb-4">
           {text}
         </p>
         <Button
+          href={link}
           primary
           className="bg-secondary-700 text-white"
           text="View service"

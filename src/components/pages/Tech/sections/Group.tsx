@@ -14,6 +14,7 @@ export const Group = () => {
             Are you ready to transform your business with our IT service
           </h6>
           <Button
+            href="/contact"
             primary
             className="bg-secondary-700 text-white"
             text="Get started"

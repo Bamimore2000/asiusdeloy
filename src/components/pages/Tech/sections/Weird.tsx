@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Group } from "./Group";
 
 const Weird = () => {
@@ -32,7 +33,10 @@ const CardFirst = () => {
           From initial setup to optimized configurations, we design and
           implement robust networks that keep your operations running smoothly.
         </p>
-        <button className="flex font-semibold items-center gap-3 text-[#0B0B0B]">
+        <Link
+          href="/contact"
+          className="flex font-semibold items-center gap-3 text-[#0B0B0B]"
+        >
           Get started{" "}
           <svg
             width="11"
@@ -46,7 +50,7 @@ const CardFirst = () => {
               fill="black"
             />
           </svg>
-        </button>
+        </Link>
       </div>
       <ImageGroup />
     </div>

@@ -7,13 +7,13 @@ export const dataCard = [
   },
   {
     header: "Energy Recruitment & Oilfield Services",
-    link: "/oil",
+    link: "/engineering",
     image: "/images/man-holding-solar-panel.webp",
     text: "At Asiusdeloy Ltd, we are dedicated to delivering top-tier expertise and a highly skilled workforce to the energy sector, including traditional oil and gas industries, as well as emerging renewable energy fields.",
   },
   {
     header: "IT Solutions",
-    link: "/tech",
+    link: "/technology",
     image: "/images/first-frame.webp",
     text: "What unites us is relentless focus, fast execution, and our passion for software craftsmanship. We are all makers at heart and care deeply about the quality of our work, down to the smallest detail.",
   },

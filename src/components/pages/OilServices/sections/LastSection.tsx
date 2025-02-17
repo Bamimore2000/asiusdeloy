@@ -5,7 +5,7 @@ const LastSection = () => {
     <section className="py-20">
       <div className="wrapper relative py-[10rem] sm:py-[5rem] bg-blue-500 grid place-items-center">
         <img
-          src="/images/vector-2.webp"
+          src="/images/bg-2.webp"
           alt=""
           className="absolute top-0 bottom-0 w-full h-full"
         />

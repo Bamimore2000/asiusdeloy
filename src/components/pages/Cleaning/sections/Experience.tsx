@@ -5,7 +5,8 @@ const Experience = () => {
         <div className="first flex flex-col gap-14 justify-between basis-1/2">
           <div className="top">
             <h5 className="text-4xl font-medium lg:text-3xl sm:!text-2xl mb-4 text-gray-900">
-              Deloy cleaning service worked for various client over the years
+              Asiusdeloy Cleaning Service has swiftly built a reputation for
+              excellence across diverse clients.
             </h5>
             <p className="text-gray-900">
               Maintaining a clean and sustainable environment. We offer
@@ -21,7 +22,7 @@ const Experience = () => {
 
         <div className="second    basis-1/2 relative">
           <div className="absolute  bg-white shadow-lg p-2 rounded-md flex items-center gap-3 bottom-[-5%] lg:right-0 right-[-5%]  text-blue-600">
-            2020 was our year starting year{" "}
+            2024 was our year starting year{" "}
             <img className="size-10" src="/images/flower.webp" alt="" />
           </div>
           <img

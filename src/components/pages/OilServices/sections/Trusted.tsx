@@ -15,6 +15,7 @@ const Trusted = () => {
           </h3>
           <div className="second flex lg:justify-start justify-end">
             <Button
+              href="/contact"
               primary
               className="bg-black text-white"
               text="View all expertise"
@@ -71,6 +72,7 @@ const List: React.FC<{ text: string }> = ({ text }) => {
     <div className="flex justify-between items-start lg:!gap-0 gap-[4vw]">
       <span className="text">{text}</span>
       <Button
+        href="/contact"
         text="Request for services"
         className="bg-secondary-500 whitespace-nowrap rounded-lg px-3 py-1 text-white"
       />

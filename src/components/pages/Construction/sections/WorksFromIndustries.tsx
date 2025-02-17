@@ -61,7 +61,7 @@ const CarouselItem: React.FC<{
         <p className="text-gray-800">{text}</p>
         <Link
           className="text-primary-600  mx-auto flex gap-2 items-center font-semibold mt-4"
-          href="/"
+          href="/contact"
         >
           Get Started <IoPlay color="#005DD6" />
         </Link>

@@ -81,6 +81,7 @@ const Item: React.FC<{
             Transform your business with expert IT consulting services.
           </h4>
           <Button
+            href="/contact"
             className="bg-secondary-700 rounded-lg text-white p-2"
             text="Get started"
           />

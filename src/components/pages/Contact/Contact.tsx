@@ -1,73 +1,15 @@
 "use client";
-
 import { useForm } from "react-hook-form";
-import Autoplay from "embla-carousel-autoplay";
-import useEmblaCarousel from "embla-carousel-react";
-
-import { EmblaOptionsType } from "embla-carousel";
+import { useState } from "react";
+import { CarouselSection } from "./CarouselSection";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Notification from "./SuccessPage";
 import { z } from "zod";
-import { PaginationVariant } from "../Home/reusables/HeroCarousel";
 import Button from "@/components/ui/Button/Button";
 import Link from "next/link";
 import { FormInput } from "@/components/ui/Form/FormInput";
 import { FormTextArea } from "@/components/ui/Form/FormTextArea";
-import React, {
-  ComponentPropsWithRef,
-  useCallback,
-  useEffect,
-  useState,
-} from "react";
-import { EmblaCarouselType } from "embla-carousel";
-type UseDotButtonType = {
-  selectedIndex: number;
-  scrollSnaps: number[];
-  onDotButtonClick: (index: number) => void;
-};
-export const useDotButton = (
-  emblaApi: EmblaCarouselType | undefined
-): UseDotButtonType => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
-  const onDotButtonClick = useCallback(
-    (index: number) => {
-      if (!emblaApi) return;
-      emblaApi.scrollTo(index);
-    },
-    [emblaApi]
-  );
-
-  const onInit = useCallback((emblaApi: EmblaCarouselType) => {
-    setScrollSnaps(emblaApi.scrollSnapList());
-  }, []);
-
-  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, []);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    onInit(emblaApi);
-    onSelect(emblaApi);
-    emblaApi.on("reInit", onInit).on("reInit", onSelect).on("select", onSelect);
-  }, [emblaApi, onInit, onSelect]);
-
-  return {
-    selectedIndex,
-    scrollSnaps,
-    onDotButtonClick,
-  };
-};
-type PropType = ComponentPropsWithRef<"button">;
-export const DotButton: React.FC<PropType> = (props) => {
-  const { children, ...restProps } = props;
-  return (
-    <button type="button" {...restProps}>
-      {children}
-    </button>
-  );
-};
+import React from "react";
 
 const services = ["Construction", "Engineering", "Technology", "Cleaning"];
 
@@ -93,9 +35,10 @@ const Contact = () => {
     setValue,
     getValues,
     watch,
+    reset,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
-    mode: "onChange", // Enable live validation
+    mode: "onChange", // Live validation
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -106,9 +49,32 @@ const Contact = () => {
     },
   });
 
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   // Handle form submission
-  const onSubmit = (data: ContactFormData) => {
-    console.log("Form Submitted:", data);
+  const onSubmit = async (data: ContactFormData) => {
+    setLoading(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit the form");
+      }
+
+      setSuccess(true);
+      reset(); // ✅ Reset form after successful submission
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const selectedServices = watch("services"); // Track services state
@@ -119,12 +85,19 @@ const Contact = () => {
     const newServices = currentServices.includes(service)
       ? currentServices.filter((s) => s !== service)
       : [...currentServices, service];
-    setValue("services", newServices);
+
+    setValue("services", newServices as ContactFormData["services"], {
+      shouldValidate: true, // ✅ Ensure validation runs after setting value
+    });
   };
+
+  if (success) {
+    return <Notification setShowNotification={setSuccess} />;
+  }
 
   return (
     <section className="py-20 lg:py-10">
-      <div className="wrapper gap-5  flex mt-[80px]">
+      <div className="wrapper gap-5 flex mt-[80px]">
         <div className="item lg:basis-full basis-1/2">
           <h1 className="text-5xl lg:text-4xl sm:text-3xl mb-2 font-semibold text-gray-950">
             Let&apos;s work together
@@ -196,7 +169,7 @@ const Contact = () => {
                 >
                   <input
                     type="checkbox"
-                    checked={selectedServices.includes(service)} // Use watch instead of getValues
+                    checked={selectedServices.includes(service)} // ✅ Uses watch to track changes
                     onChange={() => handleCheckboxChange(service)}
                     className="w-4 h-4"
                   />
@@ -209,11 +182,11 @@ const Contact = () => {
             )}
             <Button
               className={`bg-secondary-700 text-lg w-full text-white py-4 rounded-lg mt-8 ${
-                !isValid ? "opacity-50 cursor-not-allowed" : ""
+                !isValid || loading ? "opacity-50 cursor-not-allowed" : ""
               }`}
-              text="Book a service"
+              text={loading ? "Submitting..." : "Book a service"}
               type="submit"
-              disabled={!isValid}
+              disabled={!isValid || loading}
             />
           </form>
         </div>
@@ -239,47 +212,5 @@ const ContactLink: React.FC<{ link: string; text: string }> = ({
     >
       {text}
     </Link>
-  );
-};
-
-const CarouselSection = () => {
-  const images = [
-    "/images/bg-image-cleaning.webp",
-    "/images/construction-hero-image.webp",
-    "/images/bg-image-cleaning.webp",
-    "/images/bg-image-cleaning.webp",
-  ];
-  const options: EmblaOptionsType = { loop: true, align: "center" };
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    Autoplay({ playOnInit: true, delay: 3000 }),
-  ]);
-  const { selectedIndex, scrollSnaps } = useDotButton(emblaApi);
-  return (
-    <div className="pa relative h-full w-full">
-      <div ref={emblaRef} className="items h-full w-full overflow-hidden">
-        <div className="parent relative h-full w-full flex">
-          {images.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className="item h-full relative w-full  shrink-0"
-              >
-                <img
-                  className="absolute object-cover top-0 bottom-0 right-0 size-full"
-                  src={item}
-                  alt=""
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <div className="pagination-wrapper left-1/2 -translate-x-1/2 top-1/2  absolute bottom-[2.5rem]">
-        <PaginationVariant
-          scrollSnaps={scrollSnaps}
-          selectedIndex={selectedIndex}
-        />
-      </div>
-    </div>
   );
 };

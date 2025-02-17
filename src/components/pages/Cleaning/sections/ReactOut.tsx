@@ -16,8 +16,9 @@ const ReactOut = () => {
           </h5>
 
           <Button
+            href="/contact"
             text="Reach out"
-            className="bg-white block mx-auto relative text-[min(2vw,2rem)]  z-[14] text-black rounded-[3vw] px-[min(3.5vw,2rem)] py-[min(1.5vw,1rem)]"
+            className="bg-white w-max block mx-auto relative text-[min(2vw,2rem)]  z-[14] text-black rounded-[3vw] px-[min(3.5vw,2rem)] py-[min(1.5vw,1rem)]"
           />
 
           <img

@@ -51,7 +51,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <address>1 kendale Grove Nottingham NG3 3BA</address>
+                  <address>1 kendale Grove Nottingham NG3 3BA, UK</address>
                   <span className="bg-white text-black p-1 px-2 rounded-3xl">
                     Branch
                   </span>

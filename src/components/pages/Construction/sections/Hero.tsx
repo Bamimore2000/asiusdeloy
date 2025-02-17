@@ -36,6 +36,7 @@ const Hero = () => {
             building solutions that empower businesses to grow.
           </p>
           <Button
+            href="/contact"
             primary
             className="bg-secondary-700 lg:rounded-full lg:!bg-[#F8F8F8] lg:text-[#2E2E2E] w-max  text-white"
             text="Book a service"
