@@ -169,3 +169,14 @@ body {
     transform: translate3d(100%, 0, 0);
   }
 }
+
+/* for smaller devices */
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+.hero-max {
+  max-height: 768px;
+}

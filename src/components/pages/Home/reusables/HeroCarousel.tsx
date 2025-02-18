@@ -67,7 +67,7 @@ export const HeroCarouselSlider: React.FC = () => {
   ]);
   const { selectedIndex, scrollSnaps } = useDotButton(emblaApi);
   return (
-    <div className="absolute top-0 overflow-clip max-w-full left-0 w-full h-full">
+    <div className="absolute hero-max top-0 overflow-clip max-w-full left-0 w-full h-full">
       {/* overlay */}
       <div className="overlay h-full w-full absolute inset-0 z-[5] bg-[#9B501333]/20"></div>
 

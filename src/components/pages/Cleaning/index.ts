@@ -56,13 +56,13 @@ export const imagesData = [
     {
         text: "After our construction project, the site was a mess, but this cleaning team made it look brand new! They handled the dust, debris, and deep cleaning with ease.",
         title: "Project Supervisor",
-        image: "/images/people-in-site.webp",
+        image: "/images/people-image.webp",
         color: "/images/eli.webp"
     },
     {
         text: "After our construction project, the site was a mess, but this cleaning team made it look brand new! They handled the dust, debris, and deep cleaning with ease. Will definitely use them for future projects!",
         title: "Office Manager",
-        image: "/images/people-in-site.webp",
+        image: "/images/bg-image-cleaning.webp",
         color: "/images/elli-3.webp"
     },
 

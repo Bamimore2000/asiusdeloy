@@ -10,7 +10,7 @@ const StayUpdated = () => {
               className="absolute  pointer-events-none h-full w-full inset-0 bottom-0  right-0"
             />
             <h4 className="text-4xl sm:text-xl z-[100] mb-8 text-center font-semibold">
-              Stay Updated with the Latest <br /> from Deloy LTD
+              Stay Updated with the Latest <br /> from Asiusdeloy LTD
             </h4>
             <p className="text-primary-100 z-[5] text-center mb-8">
               Sign up for our newsletter to receive updates on our projects,

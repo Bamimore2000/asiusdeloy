@@ -26,7 +26,7 @@ const Leading = () => {
             text="Reach out"
           />
         </div>
-        <div className="second lg:w-full lg:pr-[8rem] flex flex-1 justify-center relative z-[10]">
+        <div className="second lg:w-full lg:pr-[8rem] pb-8 flex flex-1 justify-center relative z-[10]">
           <div className="image lg:mx-auto relative ">
             <img
               className="w-[220px] lg:mx-auto rounded-2xl object-cover h-[250px]"

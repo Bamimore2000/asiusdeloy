@@ -5,9 +5,9 @@ const Hero = () => {
   return (
     <section
       style={{}}
-      className="h-screen overflow-hidden max-h-screen w-full"
+      className="h-screen hero-max overflow-hidden max-h-screen w-full"
     >
-      <div className="wrapper w-full h-full text-white ">
+      <div className="wrapper w-full hero-max h-full text-white ">
         <div className="z-[20] mt-[20vh] sm:mt-[15rem] max-w-full relative">
           <h1 className="header border-b-2 pb-[3rem] sm:pb-0 mb-[3rem] sm:border-b-0 sm:mb-[1rem] border-b-white w-max leading-[4rem]  font-bold">
             Construction, Engineering, <br /> Technology & Creating <br /> Clean

@@ -8,7 +8,7 @@ const Hero = () => {
     <section
       className={`flex  ${
         !isMobile && "wrapper"
-      }  h-screen overflow-hidden max-h-screen w-full`}
+      }  h-screen overflow-hidden hero-max w-full`}
     >
       <div className={`first lg:text-white   relative lg:w-full w-[45%]`}>
         <div
@@ -49,7 +49,7 @@ const Hero = () => {
           background: "url(/images/construction-hero-image.webp)",
           backgroundSize: "cover",
         }}
-        className="second h-full lg:hidden w-[45%] absolute top-0 right-0"
+        className="second h-full hero-max  lg:hidden w-[45%] absolute top-0 right-0"
       ></div>
     </section>
   );

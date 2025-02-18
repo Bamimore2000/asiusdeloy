@@ -1,9 +1,10 @@
 import Home from "@/components/pages/Home/Home";
 
 export const metadata = {
-  title: "Asiusdeloy Ltd | Expert Cleaning, Construction & IT Solutions",
+  title:
+    "Asiusdeloy Ltd | Expert Cleaning, Engineering, Construction & IT Solutions",
   description:
-    "Asiusdeloy Ltd provides top-tier cleaning, construction, and technology services. We deliver sustainable, reliable, and customer-centric solutions tailored to your needs.",
+    "Asiusdeloy Ltd provides top-tier cleaning, engineering, construction, and technology services. We deliver sustainable, reliable, and customer-centric solutions tailored to your needs.",
   keywords: [
     "cleaning services",
     "construction",
@@ -15,9 +16,10 @@ export const metadata = {
   authors: [{ name: "Asiusdeloy Ltd" }],
   robots: "index, follow",
   openGraph: {
-    title: "Asiusdeloy Ltd | Expert Cleaning, Construction & IT Solutions",
+    title:
+      "Asiusdeloy Ltd | Expert Cleaning, Engineering, Construction & IT Solutions",
     description:
-      "Asiusdeloy Ltd provides expert cleaning, construction, and IT solutions tailored to your needs.",
+      "Asiusdeloy Ltd provides expert cleaning, engineering, construction, and IT solutions tailored to your needs.",
     url: "https://www.asiusdeloy.co.uk",
     type: "website",
     images: [
@@ -31,7 +33,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Asiusdeloy Ltd | Expert Cleaning, Construction & IT Solutions",
+    title:
+      "Asiusdeloy Ltd | Expert Cleaning, Construction, Engineering & IT Solutions",
     description:
       "Expert cleaning, construction, and IT solutions for businesses and individuals.",
     images: ["https://www.asiusdeloy.co.uk/cover-image.jpg"],

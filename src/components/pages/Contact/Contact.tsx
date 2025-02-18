@@ -108,16 +108,13 @@ const Contact = () => {
           </p>
           <ContactLink
             text="Shoot us an email"
-            link="mailto:emmanuelar35@gmail.com"
+            link="mailto:enquiries@asiusdeloyltd.co.uk"
           />
           <ContactLink
             text="Message us on WhatsApp"
-            link="mailto:emmanuelar35@gmail.com"
+            link="https://wa.me/447899682616"
           />
-          <ContactLink
-            text="Call +443425363646"
-            link="mailto:emmanuelar35@gmail.com"
-          />
+          <ContactLink text="Call +447899682616" link="tel:+447899682616" />
 
           <form
             className="mt-8 flex flex-col gap-6"
