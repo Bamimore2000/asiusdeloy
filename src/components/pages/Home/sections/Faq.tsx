@@ -13,11 +13,6 @@ interface FaqItem {
 
 const mockFaqs: FaqItem[] = [
   {
-    question: "What is your refund policy?",
-    answer:
-      "We offer a 30-day money-back guarantee. If you're not satisfied with your purchase, contact our support team within 30 days for a full refund.",
-  },
-  {
     question: "Do you offer 24/7 support?",
     answer:
       "Yes, our support team is available 24/7 via live chat and email to assist you with any issues or inquiries.",

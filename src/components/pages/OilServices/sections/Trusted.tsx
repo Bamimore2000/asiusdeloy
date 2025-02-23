@@ -13,14 +13,14 @@ const Trusted = () => {
           <h3 className="font-semibold md:text-3xl sm:!text-2xl text-4xl">
             Your Trusted Partner for Skilled <br /> Oilfeild Workforce Solutions{" "}
           </h3>
-          <div className="second flex lg:justify-start justify-end">
+          {/* <div className="second flex lg:justify-start justify-end">
             <Button
               href="/contact"
               primary
               className="bg-black text-white"
               text="View all expertise"
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="jobs wrapper mt-8">

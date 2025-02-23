@@ -32,8 +32,8 @@ export const contactLink = [
   },
 
   {
-    name: "enquiries@asiusdeloyltd.com",
-    url: "mailto:enquiries@asiusdeloyltd.com",
+    name: "enquiries@asiusdeloyltd.co.uk",
+    url: "mailto:enquiries@asiusdeloyltd.co.uk",
   },
 ];
 
@@ -73,36 +73,28 @@ export const navLinks = [
     name: "Services",
     url: "/services",
   },
-  {
-    name: "Blog",
-    url: "security",
-  },
-  {
-    name: "Portfolio",
-    url: "/faq",
-  },
 ];
 
 export const socials = [
   {
     name: "Facebook",
     icon: <FacebookIcon />,
-    url: "facebook.com",
+    url: "https://www.facebook.com/people/Asiusdeloy-Ltd/61573586967363/?rdid=6ECrOk51wCeV0soz&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DcRBZ9Xxr%2Fhttps://www.facebook.com/people/Asiusdeloy-Ltd/61573586967363/?rdid=6ECrOk51wCeV0soz&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DcRBZ9Xxr%2F",
   },
   {
     name: "Twitter",
     icon: <TwitterIcon />,
-    url: "twitter.com",
+    url: "https://x.com/asiusdeloyltd",
   },
   {
     name: "WhatsApp",
     icon: <WhatsappIcon />,
-    url: "facebook.com",
+    url: "https://wa.me/447899682616",
   },
   {
     name: "Instagram",
     icon: <InstagramIcon />,
-    url: "instagram.com",
+    url: "https://www.instagram.com/asiusdeloyservices?igsh=OXJmcXhzYnZ5b25s",
   },
 ];
 

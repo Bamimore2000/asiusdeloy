@@ -24,7 +24,7 @@ const Hero = () => {
           <h1 className="font-semibold sm:!text-3xl md:text-4xl sm:mb-4 text-gray-900 text-5xl mb-8">
             Professional Cleaning <br /> Solutions Tailored <br /> to Your Needs
           </h1>
-          <h2 className="text-lg text-gray-800 mb-8 sm:mb-4 max-w-[520px]">
+          <h2 className="text-lg text-gray-800 mb-12 sm:mb-8 max-w-[520px]">
             We specialize in a wide range of cleaning services tailored to meet
             the specific needs of your property, business, or construction site.
           </h2>
@@ -34,9 +34,9 @@ const Hero = () => {
             primary
             text="Book a service"
           />
-          <div className="just flex gap-2 text-xl sm:mt-4  text-gray-800 items-center">
+          <div className="just flex gap-2 text-lg sm:mt-4  text-gray-800 items-center">
             {" "}
-            <RiPhoneFill className="text-4xl sm:text-3xl" />
+            <RiPhoneFill className="text-lg" />
             Just one call away
           </div>
         </div>
