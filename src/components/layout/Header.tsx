@@ -87,7 +87,7 @@ const Header = () => {
         scrolled
           ? "bg-white shadow-md"
           : activePaths.includes(pathname)
-          ? `  ${!menuOpen && "lg:mt-4 lg:bg-white  "} mx-auto`
+          ? `  ${!menuOpen && " lg:bg-white  "} mx-auto`
           : "bg-white"
       }`}
     >
@@ -212,7 +212,7 @@ const SubMenu: React.FC<{
           animate={{ height: "auto", opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="flex mt-3text-lg font-normal flex-col gap-2 overflow-hidden"
+          className="flex mt-3 text-lg font-normal flex-col gap-2 overflow-hidden"
         >
           {Drop.map((item, index) => (
             <Link
