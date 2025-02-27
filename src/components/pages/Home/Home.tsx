@@ -4,7 +4,7 @@ import Services from "./sections/Services";
 // import WhoWeAre from "./sections/WhoWeAre";
 import WhyChoose from "./sections/WhyChoose";
 import Works from "./sections/Works";
-import Faq from "./sections/Faq";
+// import Faq from "./sections/Faq";
 import StayUpdated from "./sections/StayUpdated";
 import Testimonials from "./sections/Testimonials";
 
@@ -18,7 +18,7 @@ const Home = () => {
       <Inverted />
       <WhyChoose />
       <Testimonials />
-      <Faq />
+      {/* <Faq /> */}
       <StayUpdated />
     </main>
   );

@@ -161,6 +161,7 @@ body {
 .embla__progress--hidden .embla__progress__bar {
   animation-play-state: paused;
 }
+
 @keyframes autoplay-progress {
   0% {
     transform: translate3d(0, 0, 0);
@@ -174,6 +175,12 @@ body {
 @media screen and (max-width: 360px) {
   html {
     font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .embla__progress {
+    height: 0.3rem;
   }
 }
 

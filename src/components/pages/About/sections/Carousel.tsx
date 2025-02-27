@@ -8,8 +8,6 @@ const images = [
   "/images/slider-image-1.webp",
   "/images/slider-image-2.webp",
   "/images/slider-image-3.webp",
-  "/images/slider-image-3.webp",
-  "/images/slider-image-3.webp",
 ];
 
 const Carousel = () => {

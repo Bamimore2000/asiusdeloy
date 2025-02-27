@@ -4,7 +4,7 @@ import { RiPhoneFill } from "react-icons/ri";
 const Hero = () => {
   return (
     <section className="flex max-w mx-auto gap-10  min-h-screen ">
-      <div className="items flex lg:flex-col-reverse gap-10 h-auto">
+      <div className="items flex lg:flex-col-reverse lg:gap-10 gap-20 h-auto">
         <div className="first relative h-full basis-[40%]">
           <div
             style={{

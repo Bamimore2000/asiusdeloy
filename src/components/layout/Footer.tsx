@@ -125,7 +125,7 @@ const LinksWrapper: React.FC<{
 }> = ({ title, data, external, className }) => {
   return (
     <div className={`${className}`}>
-      <LinkHeader name={title} />
+      <LinkHeader className="text-gray-800" name={title} />
       <ul>
         {data.map((item, index) => {
           return (

@@ -312,16 +312,16 @@ const CarouselContainer: React.FC<{
           openLarge && "hidden"
         }  justify-between`}
       >
-        <div className="two p-4 flex gap-2 rounded-3xl bg-secondary-100">
+        <div className="two p-4 sm:py-0 flex items-center  gap-2 rounded-3xl bg-secondary-100">
           <button
-            className="embla__play"
+            className="embla__play h-max"
             onClick={toggleAutoplay}
             type="button"
           >
             {autoplayIsPlaying ? (
-              <CiPause1 color="#BF6217" size={20} />
+              <CiPause1 color="#BF6217" size={14} />
             ) : (
-              <CiPlay1 color="#BF6217" size={20} />
+              <CiPlay1 color="#BF6217" size={14} />
             )}
           </button>
           <div
@@ -333,7 +333,7 @@ const CarouselContainer: React.FC<{
           </div>
         </div>
 
-        <div className="flex gap-5">
+        <div className="flex sm:gap-2 gap-5">
           <PrevButton
             onClick={() => onAutoplayButtonClick(onPrevButtonClick)}
             disabled={prevBtnDisabled}

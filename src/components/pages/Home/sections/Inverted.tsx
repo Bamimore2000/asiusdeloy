@@ -26,12 +26,14 @@ const Component: React.FC<{
     >
       <h4
         className={`text-3xl ${
-          !end && " text-right flex justify-end"
+          !end && "text-right  flex justify-end"
         } sm:text-2xl sm:mb-3 font-semibold mb-5 max-w-[300px]`}
       >
         {header}
       </h4>
-      <p className="text-lg text-gray-750 mb-5">{text}</p>
+      <p className={`text-lg text-gray-750 mb-5 ${!end && "text-right"}`}>
+        {text}
+      </p>
       <img
         className="w-full h-[400px] object-cover rounded-xl"
         src={image}

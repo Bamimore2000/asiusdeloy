@@ -87,10 +87,7 @@ const Header = () => {
         scrolled
           ? "bg-white shadow-md"
           : activePaths.includes(pathname)
-          ? `  ${
-              !menuOpen &&
-              "lg:mt-4 lg:bg-white lg:rounded-full lg:scale-[0.94] lg:px-2 lg:transform lg:origin-center "
-            } mx-auto`
+          ? `  ${!menuOpen && "lg:mt-4 lg:bg-white  "} mx-auto`
           : "bg-white"
       }`}
     >
@@ -141,13 +138,13 @@ const Header = () => {
             <X size={24} />
           </button>
         </div>
-        <ul className=" space-y-4">
+        <ul className=" mt-10 space-y-4">
           {navLinks.map((item, index) => {
             const isService = item.url === "/services";
             return (
               <li key={index}>
                 <div
-                  className={` block h-max  py-2 text-xl text-gray-900 font-semibold rounded transition ${
+                  className={` block h-max   py-2 text-xl text-gray-900 font-semibold rounded transition ${
                     pathname === item.url ? "text-gray-700" : "text-inherit"
                   }`}
                 >
@@ -215,7 +212,7 @@ const SubMenu: React.FC<{
           animate={{ height: "auto", opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="flex mt-3 text-lg font-normal flex-col gap-2 overflow-hidden"
+          className="flex mt-3text-lg font-normal flex-col gap-2 overflow-hidden"
         >
           {Drop.map((item, index) => (
             <Link
@@ -303,7 +300,7 @@ export const DropDown = () => {
                 key={index}
                 href={item.link}
               >
-                <span className="w-5">{item.icon}</span>
+                <span className="w-5 flex justify-center">{item.icon}</span>
                 <span className="text-gray-900">{item.name}</span>
               </Link>
             );
@@ -320,9 +317,9 @@ export const DropDown = () => {
 
 const ImageSlider = () => {
   const images = [
-    "/images/bg-image-cleaning.webp",
-    "/images/construction-hero-image.webp",
-    "/images/bg-image-cleaning.webp",
+    "/images/slider-1.webp",
+    "/images/slider-2.webp",
+    "/images/slider-3.webp",
     "/images/bg-image-cleaning.webp",
   ];
 
@@ -334,7 +331,7 @@ const ImageSlider = () => {
   return (
     <div className="items h-full w-full">
       <div className="absolute bottom-8 right-[100px] flex gap-2 z-[4]">
-        {scrollSnaps.map((item, index) => {
+        {scrollSnaps.map((_, index) => {
           return (
             <div
               key={index}
@@ -356,7 +353,7 @@ const ImageSlider = () => {
                 key={index}
                 src={item}
                 alt=""
-                className="w-full object-cover h-full"
+                className="w-full shrink-0 object-cover h-full"
               />
             );
           })}

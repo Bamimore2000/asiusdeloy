@@ -113,7 +113,7 @@ export const PaginationVariant: React.FC<PaginationProps> = ({
   onDotButtonClick,
 }) => {
   return (
-    <div className="pagination bg-[#959595]/70 rounded-full p-5 sm:p-3 flex gap-2 xlg:gap-1 transition-all">
+    <div className="pagination bg-[#959595]/70 rounded-full p-5 sm:p-3 scale-75 flex gap-2 xlg:gap-1 transition-all">
       {scrollSnaps.map((_, index) => {
         return (
           <div
