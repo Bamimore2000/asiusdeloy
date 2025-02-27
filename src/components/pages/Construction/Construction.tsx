@@ -4,7 +4,7 @@ import Showcase from "./sections/Showcase";
 import Sidebar from "./sections/Sidebar";
 import Stats from "./sections/Stats";
 import Works from "./sections/Works";
-import WorksFromIndustries from "./sections/WorksFromIndustries";
+// import WorksFromIndustries from "./sections/WorksFromIndustries";
 
 const Construction = () => {
   return (
@@ -12,7 +12,7 @@ const Construction = () => {
       <Hero />
       <KnowAboutUs />
       <Works />
-      <WorksFromIndustries />
+      {/* <WorksFromIndustries /> */}
       <Showcase />
       <Sidebar />
       <Stats />

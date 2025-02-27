@@ -18,6 +18,37 @@ export const constructionData: ConstructionDataType[] = [
     header: "Construction and Civil",
     data: [
       {
+        title: "Structural Design & Analysis",
+        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
+        image: "/images/cconstruction-1.webp",
+      },
+      {
+        title: "Project management for construction projects.",
+        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
+        image: "/images/cconstruction-2.webp",
+      },
+      {
+        title: "Surveying & land development consulting.",
+        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
+        image: "/images/cconstruction-3.webp",
+      },
+      {
+        title:
+          "Installation &maintenance of infrastructure (bridges, roads, tunnels).",
+        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
+        image: "/images/cconstruction-5.webp",
+      },
+      {
+        title: "Site inspections and compliance with building regulations.",
+        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
+        image: "/images/cconstruction-4.webp",
+      },
+    ],
+  },
+  {
+    header: "Mechanical",
+    data: [
+      {
         title: "Design & prototyping of mechanical system",
         text: "The design and prototyping of mechanical systems involve creating innovative solutions.",
         image: "/images/construction-1.webp",
@@ -42,64 +73,17 @@ export const constructionData: ConstructionDataType[] = [
     ],
   },
   {
-    header: "Mechanical",
-    data: [
-      {
-        title: "Structural Design & Analysis",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
-      },
-      {
-        title: "Project management for construction projects.",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
-      },
-      {
-        title: "Surveying & land development consulting.",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
-      },
-      {
-        title:
-          "Installation &maintenance of infrastructure (bridges, roads, tunnels).",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
-      },
-      {
-        title: "Site inspections and compliance with building regulations.",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/money.webp",
-      },
-    ],
-  },
-  {
     header: "Electrical & Electronics ",
     data: [
       {
-        title: "Structural Design & Analysis",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
+        title: "Design & Installation of electrical systems for buildings",
+        text: "The design and installation of electrical systems for buildings are crucial for ensuring safe.",
+        image: "/images/final-1.webp",
       },
       {
-        title: "Project management for construction projects.",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
-      },
-      {
-        title: "Surveying & land development consulting.",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
-      },
-      {
-        title:
-          "Installation &maintenance of infrastructure (bridges, roads, tunnels).",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
-      },
-      {
-        title: "Site inspections and compliance with building regulations.",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/money.webp",
+        title: "Troubleshooting & Repair of Industrial electronics",
+        text: "essential for maintaining the functionality and efficiency of complex machinery ",
+        image: "/images/final-2.webp",
       },
     ],
   },
@@ -107,30 +91,9 @@ export const constructionData: ConstructionDataType[] = [
     header: "Environmental & Sustainabilty",
     data: [
       {
-        title: "Structural Design & Analysis",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
-      },
-      {
-        title: "Project management for construction projects.",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
-      },
-      {
-        title: "Surveying & land development consulting.",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
-      },
-      {
-        title:
-          "Installation &maintenance of infrastructure (bridges, roads, tunnels).",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/construction-hero-image.webp",
-      },
-      {
-        title: "Site inspections and compliance with building regulations.",
-        text: "Overseeing construction timelines, resources, and budgets to deliver successful projects",
-        image: "/images/money.webp",
+        title: "Waste management & recycling systems consulting/operations",
+        text: " focus on developing sustainable solutions to handle waste effectively while minimizing environmental impact.",
+        image: "/images/final-3.webp",
       },
     ],
   },
