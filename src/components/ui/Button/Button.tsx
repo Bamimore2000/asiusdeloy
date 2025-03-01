@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 type ButtonProps = {
   text: string;
@@ -48,7 +49,7 @@ const Button: React.FC<ButtonProps> = ({
   // Link behavior
   if (href) {
     return (
-      <a
+      <Link
         href={href}
         onClick={onClick}
         className={`btn ${
@@ -61,7 +62,7 @@ const Button: React.FC<ButtonProps> = ({
         aria-disabled={disabled}
       >
         {isLoading ? loadingSpinner : text}
-      </a>
+      </Link>
     );
   }
 

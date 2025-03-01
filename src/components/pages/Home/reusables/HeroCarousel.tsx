@@ -69,7 +69,7 @@ export const HeroCarouselSlider: React.FC = () => {
   return (
     <div className="absolute hero-max top-0 overflow-clip max-w-full left-0 w-full h-full">
       {/* overlay */}
-      <div className="overlay h-full w-full absolute inset-0 z-[5] bg-[#9B501333]/20"></div>
+      <div className="overlay h-full w-full absolute inset-0 z-[5] bg-[#21212161]/20"></div>
 
       <div ref={emblaRef} className="parent h-full overflow-hidden">
         <div className="child flex h-full w-full">

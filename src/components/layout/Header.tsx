@@ -106,7 +106,7 @@ const Header = () => {
           <Link href="/">
             <Image
               className="!w-[150px]"
-              src="/images/logo.webp"
+              src="/images/deloy-logo.webp"
               alt="Company Logo"
               width={100}
               height={50}

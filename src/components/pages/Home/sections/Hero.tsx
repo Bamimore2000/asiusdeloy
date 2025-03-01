@@ -14,6 +14,7 @@ const Hero = () => {
             Your One-Stop Solution for Quality Services Across Industries
           </p>
           <Button
+            href="/contact"
             className="bg-white sm:text-xl sm:font-medium sm:px-6 sm:py-3 text-black px-8 py-4 rounded-lg text-2xl font-semibold"
             text="Book a service"
           />

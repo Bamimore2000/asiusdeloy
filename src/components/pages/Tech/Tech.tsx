@@ -1,4 +1,4 @@
-import Faq from "./sections/Faq";
+// import Faq from "./sections/Faq";
 import Hero from "./sections/Hero";
 import Network from "./sections/Network";
 import ReactOut from "./sections/ReachOut";
@@ -15,7 +15,7 @@ const Tech = () => {
       <Weird />
       <Network />
       <ReactOut />
-      <Faq />
+      {/* <Faq /> */}
     </div>
   );
 };

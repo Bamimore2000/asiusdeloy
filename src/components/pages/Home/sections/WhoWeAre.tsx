@@ -11,7 +11,7 @@ const WhoWeAre = () => {
       <h4 className="text-primary-700 text-base wrapper mb-5">Who We Are</h4>
       <div
         className={`flex ${
-          !isMobile && "wrapper"
+          !isMobile ? "wrapper" : ""
         }   lg:flex-col lg:!gap-10 xl:gap-[5%] gap-[10%]`}
       >
         <First />
@@ -65,21 +65,23 @@ const First = () => {
 
 const Second = () => {
   return (
-    <div className="bg-primary-500 basis-1/2 text-white p-6 rounded-md">
-      <h4 className="text-4xl md:text-3xl md:mb-3 mb-5">
-        Innovating Across Industries, Building a Better Tomorrow
-      </h4>
-      <div className="items">
-        {whoWeAreData.map((item, index) => {
-          return (
-            <ItemCard
-              key={index}
-              digit={item.number}
-              text={item.text}
-              index={index}
-            />
-          );
-        })}
+    <div className="bg-primary-500 basis-1/2 text-white py-6 rounded-md">
+      <div className="items wrapper">
+        <h4 className="text-4xl md:text-3xl md:mb-3 mb-5">
+          Innovating Across Industries, Building a Better Tomorrow
+        </h4>
+        <div className="items">
+          {whoWeAreData.map((item, index) => {
+            return (
+              <ItemCard
+                key={index}
+                digit={item.number}
+                text={item.text}
+                index={index}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

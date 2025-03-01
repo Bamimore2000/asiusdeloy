@@ -6,14 +6,18 @@ const Footer = () => {
   return (
     <footer className="bg-gray-200 overflow-hidden py-14">
       <div className="wrapper">
-        <img src="/images/logo.webp" alt="" className="logo w-[300px]" />
+        <img
+          src="/images/deloy-logo.webp"
+          alt=""
+          className="logo mb-2 w-[200px]"
+        />
         <div className="items flex lg:flex-col lg:gap-8 gap-[10%] ">
-          <div className="first">
-            <p className="text-gray-700 pt-2 pl-4">
+          <div className="first mb-2">
+            <p className="text-gray-700 pt-2 ">
               Construction, IT Service, Engineering, Cleaning Services
             </p>
 
-            <div className="logo-wrapper flex pl-4 mt-4 gap-5">
+            <div className="logo-wrapper mt-3 flex gap-5">
               {socials.map((item, index) => {
                 return (
                   <IconWrapper key={index} icon={item.icon} link={item.url} />

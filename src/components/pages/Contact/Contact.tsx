@@ -137,7 +137,7 @@ const Contact = () => {
             <FormInput
               type="email"
               label="Email"
-              placeholder="Email address"
+              placeholder="Your@company.comk"
               error={errors.email?.message}
               {...register("email")}
             />
@@ -148,37 +148,42 @@ const Contact = () => {
               error={errors.phone?.message}
               {...register("phone")}
             />
-            <FormTextArea
-              label="Message"
-              placeholder="How much does a cleaning service cost?"
-              error={errors.message?.message}
-              {...register("message")}
-            />
-            <h3 className="block w-full text-gray-950 text-base font-semibold mb-2">
-              Services
-            </h3>
-
-            <div className="grid grid-cols-2 gap-4">
-              {services.map((service) => (
-                <label
-                  key={service}
-                  className="flex accent-secondary-700 items-center gap-1 space-x-2"
-                >
-                  <input
-                    type="checkbox"
-                    checked={selectedServices.includes(service)} // ✅ Uses watch to track changes
-                    onChange={() => handleCheckboxChange(service)}
-                    className="w-4 h-4"
-                  />
-                  <span>{service}</span>
-                </label>
-              ))}
+            <div className="mt-8">
+              <FormTextArea
+                label="Message"
+                placeholder="How much does a cleaning service cost?"
+                error={errors.message?.message}
+                {...register("message")}
+              />
             </div>
-            {errors.services && (
-              <p className="text-red-500">{errors.services.message}</p>
-            )}
+
+            <div className="second">
+              <h3 className="block w-full mb-3 text-gray-950 text-base font-semibold">
+                Services
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                {services.map((service) => (
+                  <label
+                    key={service}
+                    className="flex accent-secondary-700 items-center gap-1 space-x-2"
+                  >
+                    <input
+                      type="checkbox"
+                      checked={selectedServices.includes(service)} // ✅ Uses watch to track changes
+                      onChange={() => handleCheckboxChange(service)}
+                      className="w-4 h-4"
+                    />
+                    <span>{service}</span>
+                  </label>
+                ))}
+              </div>
+              {errors.services && (
+                <p className="text-red-500">{errors.services.message}</p>
+              )}
+            </div>
+
             <Button
-              className={`bg-secondary-700 text-lg w-full text-white py-4 rounded-lg mt-8 ${
+              className={`bg-secondary-700 text-lg w-full text-white py-4 rounded-lg mt-16 ${
                 !isValid || loading ? "opacity-50 cursor-not-allowed" : ""
               }`}
               text={loading ? "Submitting..." : "Book a service"}

@@ -1,10 +1,10 @@
 import { DataProps } from "./sections/Services";
 
 export const heroImages = [
+  "/images/slider-4.webp",
   "/images/slider-1.webp",
   "/images/slider-2.webp",
   "/images/slider-3.webp",
-  "/images/hero-image.webp",
 ];
 
 export const sliderImages = [
@@ -58,15 +58,15 @@ export const sliderImages = [
 
 export const whoWeAreData = [
   {
-    number: 50,
+    number: 10,
     text: "Clients served across various industries, ensuring high-quality services tailored to different needs",
   },
   {
-    number: 50,
+    number: 10,
     text: "Projects Completed – Spanning cleaning, engineering, IT, and construction services.",
   },
   {
-    number: 20,
+    number: 10,
     text: "Customer Satisfaction Rate – Proven reliability and excellence in every service we provide.",
   },
   {
