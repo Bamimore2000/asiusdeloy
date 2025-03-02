@@ -187,3 +187,9 @@ body {
 .hero-max {
   max-height: 768px;
 }
+.form input:not(:placeholder-shown) {
+  border-color: #2e2e2e;
+}
+.form textarea:not(:placeholder-shown) {
+  border-color: #2e2e2e;
+}

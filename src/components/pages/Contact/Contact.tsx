@@ -96,7 +96,7 @@ const Contact = () => {
   }
 
   return (
-    <section className="py-20 lg:py-10">
+    <section className="py-20 form lg:py-10">
       <div className="wrapper gap-5 flex mt-[80px]">
         <div className="item lg:basis-full basis-1/2">
           <h1 className="text-5xl lg:text-4xl sm:text-3xl mb-2 font-semibold text-gray-950">

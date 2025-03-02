@@ -19,7 +19,9 @@ export const FormTextArea = forwardRef<HTMLTextAreaElement, FormTextAreaProps>(
           }}
           rows={8}
           ref={ref}
-          className={`appearance-none resize-none border-secondary-200 text-gray-700 leading-tight focus:outline-none" w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-secondary-700 ${className}`}
+          className={`appearance-none ${
+            error && "!border-red-600"
+          } outline-none focus:shadow-sm focus:shadow-secondary-200 shadow-sm shadow-[#9B9B9B0D] peer border-2 border-gray-500 p-2 focus:border-secondary-200  focus:border rounded w-full py-4 px-3 text-gray-900 leading-tight focus:outline-none" ${className}`}
           {...props}
         />
         {error && <p className="text-red-500">{error}</p>}
