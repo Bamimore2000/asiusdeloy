@@ -137,7 +137,7 @@ const Contact = () => {
             <FormInput
               type="email"
               label="Email"
-              placeholder="Your@company.comk"
+              placeholder="Your@company.com"
               error={errors.email?.message}
               {...register("email")}
             />
